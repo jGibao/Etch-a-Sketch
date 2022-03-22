@@ -28,6 +28,7 @@ function changeSize(input) {
         populateBoard(input);
         resetBoard();
     }
+    click = false;
 }
 
 function colorSquare() {
@@ -56,12 +57,12 @@ function resetBoard() {
     let board = document.querySelector('.board');
     let squares = board.querySelectorAll('div');
     squares.forEach(div => div.style.backgroundColor = 'white');
-    squares.forEach(div => div.style.webkitFilter = "brightness(100%)");
+    //squares.forEach(div => div.style.webkitFilter = "brightness(100%)");
     console.log("reset");
 }
 
 document.querySelector('body').addEventListener('click', (e) => {
-    if (e.target.tagName != 'BUTTON') {
+    if (e.target.tagName != 'BUTTON' && e.target.tagName != 'INPUT') {
         click = !click;
     }
 });
