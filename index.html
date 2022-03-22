@@ -11,20 +11,22 @@
 </head>
 
 <body>
-    <div class="flex-container">
-        <div class="title">
-            <h1>Etch-a-Sketch</h1>
-        </div>
-        <div class="content">
-            <div class="board"></div>
-            <div class="buttons">
-                <button onclick="changeColor('grey')">Lápis</button>
-                <button onclick="changeColor('white')">Borracha</button>
-                <button onclick="changeColor('random')">Colorido</button>
-                <button onclick="resetBoard()">Limpar</button>
+    <div id="wrapper">
+        <div class="flex-container">
+            <div class="title">
+                <h1>Etch-a-Sketch</h1>
             </div>
-            <input type="text" placeholder="Tamanho da Tela" value="16" onchange="changeSize(this.value)">
-            <button>Definir Tamanho</button>
+            <div class="content">
+                <div class="board"></div>
+                <div class="buttons">
+                    <button onclick="changeColor('grey')">Lápis</button>
+                    <button onclick="changeColor('white')">Borracha</button>
+                    <button onclick="changeColor('random')">Colorido</button>
+                    <button onclick="resetBoard()">Limpar</button>
+                </div>
+                <input type="text" placeholder="Tamanho da Tela" value="16" onchange="changeSize(this.value)">
+                <button id="tamanho">Definir Tamanho</button>
+            </div>
         </div>
     </div>
     <div class="footer">
